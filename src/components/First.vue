@@ -4,7 +4,7 @@
             <div class="column">
                 <h2>{{ticker}}</h2>
                 <p>{{name}}</p>
-                <h4>BKK: <a style="text-decoration: none" target="_blank" :href="webUrl">{{webUrl}}</a></h4>
+                <h4><a style="color: #521d7c" target="_blank" :href="webUrl">{{webUrl}}</a></h4>
             </div>
             <div class="column right">
                 <h2>{{close}}</h2>
