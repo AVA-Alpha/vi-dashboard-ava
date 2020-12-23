@@ -89,7 +89,7 @@
               <li v-for="item in charts[currentComponentNav]" :id="item.id" :key="item.id">
                 <label></label>
                 <input type="checkbox" :name="item.id" v-model="item.show"/>
-                Chart with id: {{ item.feature }}
+                {{ item.feature }}
               </li>
             </ul>
             <button @click="selectAll">Select all</button>

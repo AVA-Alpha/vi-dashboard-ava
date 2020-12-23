@@ -4,13 +4,13 @@
             <div class="column">
                 <h2>{{ticker}}</h2>
                 <p>{{name}}</p>
-                <h4><a style="color: #521d7c" target="_blank" :href="webUrl">{{webUrl}}</a></h4>
+                <h4><a style="text-decoration: none; color: #8044b5 " target="_blank" :href="webUrl">{{webUrl.replace("http://", "").replace("https://", "")}}</a></h4>
             </div>
             <div class="column right">
-                <h2>{{close}}</h2>
+                <h2>{{close.toLocaleString(undefined, {minimumFractionDigits: 2})}}</h2>
                 <div>
-                    <span>{{change >= 0 ? '+' + change : change}}</span>
-                    <span>{{pct_change}}%</span>
+                    <span>{{change >= 0 ? '+' + change.toLocaleString(undefined, {minimumFractionDigits: 2}) : change.toLocaleString(undefined, {minimumFractionDigits: 2})}}</span>
+                    <span>{{pct_change.toLocaleString(undefined, {minimumFractionDigits: 2})}}%</span>
                 </div>
             </div>
         </div>
@@ -136,7 +136,7 @@
                 font-size: 25px;
             }
             p {
-                font-size: 19px;
+                font-size: 20px;
             }
         }
     }
